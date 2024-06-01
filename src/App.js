@@ -20,35 +20,39 @@ function App() {
 
   useEffect(() => {
     console.log(todos);
-  }, [todos])
+  }, [todos]);
 
   /*追加されたTodoを表示する関数*/
   function DisplayTodo(props) {
-    return <li>{props.todo}</li>;
+    return (
+      <li>
+        <p>タスク名：{props.todo}</p>
+        <button>完了</button>
+      </li>
+    );
   }
 
   return (
     //return:画面に返す要素
     <div className="App">
       <h1>Todo-List With React</h1>
-      <br></br>
 
-      <form className="add" onSubmit={addTodo}>
-        <label>タスクを追加</label>
-        <input
-          type="text"
-          name="add"
-          placeholder="やるべきことは何？"
-          /*以下2行がよくわからない */
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
+      <form className="addForm" onSubmit={addTodo}>
+        <div>
+          <label htmlFor="taskName">タスクを追加</label>
+          <input
+            type="text"
+            id="taskName"
+            placeholder="やるべきことは何？"
+            /*以下2行がよくわからない */
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+        </div>
         <button type="submit">追加</button>
       </form>
 
-
-
-      <ul>
+      <ul className="list">
         {todos.map(function (todo, index) {
           return <DisplayTodo key={index} todo={todo} />;
         })}

@@ -1,0 +1,49 @@
+.App {
+  max-width: 1020px;
+  min-width: 380px;
+  width: 100%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.addForm {
+  display: flex;
+  justify-content: center;
+}
+
+.addForm label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addForm div:has(#taskName) {
+  display: flex;
+  gap: 2rem;
+}
+
+#taskName {
+  width: 200px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding: 0.5rem;
+  border-right: none;
+}
+
+.addForm button[type="submit"] {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding: 0.5rem;
+}
+
+.list {
+  padding-left: 0;
+  padding-inline: 0.5rem;
+}
+.list li {
+  display: flex;
+  justify-content: space-between;
+}
