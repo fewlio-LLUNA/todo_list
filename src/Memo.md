@@ -2,9 +2,12 @@
 
 ### Q.`setTodos([...todos, input])>`の`...`って何？
 ...はJavaScriptのスプレッド構文（spread syntax）と呼ばれるものです。これを使うことで配列やオブジェクトを簡単に展開できます。
-`const oldArray = [1, 2, 3];`
-`const newArray = [...oldArray, 4];`
-`console.log(newArray); // [1, 2, 3, 4]`
+
+```js
+const oldArray = [1, 2, 3];
+const newArray = [...oldArray, 4];
+console.log(newArray); // [1, 2, 3, 4]
+```
 
 ### Q.`const addTodo = (e) =>`が`const addTodo = () =>`ではないのはなぜ？
 #### `e`とは？
