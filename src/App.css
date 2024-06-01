@@ -5,14 +5,19 @@
   margin: auto;
 }
 
+h1 {
+  text-align: center;
+}
+
 .addForm {
-    display: flex;
+  display: flex;
+  justify-content: center;
 }
 
 .addForm label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .addForm div:has(#taskName) {
@@ -29,7 +34,16 @@
 }
 
 .addForm button[type="submit"] {
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    padding: 0.5rem;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding: 0.5rem;
+}
+
+.list {
+  padding-left: 0;
+  padding-inline: 0.5rem;
+}
+.list li {
+  display: flex;
+  justify-content: space-between;
 }

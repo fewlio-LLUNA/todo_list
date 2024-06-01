@@ -20,11 +20,16 @@ function App() {
 
   useEffect(() => {
     console.log(todos);
-  }, [todos])
+  }, [todos]);
 
   /*追加されたTodoを表示する関数*/
   function DisplayTodo(props) {
-    return <li>{props.todo}</li>;
+    return (
+      <li>
+        <p>タスク名：{props.todo}</p>
+        <button>完了</button>
+      </li>
+    );
   }
 
   return (
@@ -47,7 +52,7 @@ function App() {
         <button type="submit">追加</button>
       </form>
 
-      <ul>
+      <ul className="list">
         {todos.map(function (todo, index) {
           return <DisplayTodo key={index} todo={todo} />;
         })}
