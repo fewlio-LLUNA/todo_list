@@ -7,8 +7,10 @@ function App() {
 
   /*todos（Todoリスト）とsetTodos（todosを更新する関数）を定義
     input（入力フィールドの値）とsetInput（inputを更新する関数）を定義 */
-  const [todos, setTodos] = useState([]) //[]ってなに???????????????????????
-  const [input, setInput] = useState('') //文字列がない状態をデフォルトとする
+  const [todos, setTodos] = useState([]) //todos = []
+  const [input, setInput] = useState('') //input - ""
+  console.log(todos, setTodos)
+  console.log(input, setInput)
 
   /*todoを追加する関数*/
   const addTodo = (e) => { //(e)を指定することでイベントオブジェクトの指定ができる？
