@@ -43,9 +43,10 @@ function App() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
+        <button type="submit">追加</button>
       </form>
 
-      <button onClick={addTodo}>追加</button>
+
 
       <ul>
         {todos.map(function (todo, index) {
