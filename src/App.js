@@ -18,17 +18,24 @@ function App() {
     }
   };
 
+  /*todoを削除する関数 */
+  const removeTodo = (index) => {
+    setTodos(todos.filter((_, i) => i !== index));
+  };
+
   useEffect(() => {
     console.log(todos);
   }, [todos]);
 
   /*追加されたTodoを表示する関数*/
-  function DisplayTodo(props) {
+  function DisplayTodo({ todo, index, removeTodo }) {
     return (
+      <div className="DisplayTodo">
       <li>
-        <p>タスク名：{props.todo}</p>
-        <button>完了</button>
+        <p>タスク名：{todo}</p>
+        <button onClick={() => removeTodo(index)}>完了</button>
       </li>
+      </div>
     );
   }
 
@@ -44,7 +51,6 @@ function App() {
             type="text"
             id="taskName"
             placeholder="やるべきことは何？"
-            /*以下2行がよくわからない */
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
@@ -54,7 +60,7 @@ function App() {
 
       <ul className="list">
         {todos.map(function (todo, index) {
-          return <DisplayTodo key={index} todo={todo} />;
+          return <DisplayTodo key={index} todo={todo} index={index} removeTodo={removeTodo}/>;
         })}
       </ul>
     </div>
