@@ -14,7 +14,7 @@
   "homepage": "https://fewlio-LLUNA.github.io/todo_list",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && rm -rf docs && mv -f build docs",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

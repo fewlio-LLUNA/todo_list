@@ -25,6 +25,8 @@ jobs:
         run: |
           echo "build開始"
           npm run build
+          rm -rf docs
+          mv -f build docs
         env:
           GITHUB_PAGES: true
 
