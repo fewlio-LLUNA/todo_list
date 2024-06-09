@@ -23,6 +23,7 @@ jobs:
 
       - name: build
         run: |
+          echo "build開始"
           npm run build
         env:
           GITHUB_PAGES: true
